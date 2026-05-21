@@ -1,11 +1,56 @@
-name: Build ZMK firmware
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Main'
 on:
   workflow_dispatch:
-  # push:
-  #   paths:
-  #     - config/**
-  #     - build.yaml
+  push:
+    paths:
+      - 'config/**'
+      - 'build.yaml'
+      - '.github/workflows/build.yml'
 
 jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+  main:
+    runs-on: ubuntu-latest
+    container:
+      image: zmkfirmware/zmk-dev-arm:3.5
+    strategy:
+      fail-fast: false
+      matrix:
+        board: [nice_nano_v2, corneish_zen_left@2.0.0, corneish_zen_right@2.0.0, glove80_lh, glove80_rh]
+        shield: [""]
+        include:
+          - board: nice_nano_v2
+            shield: corne_left
+          - board: nice_nano_v2
+            shield: corne_right
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          path: 'miryoku_zmk'
+      - name: build
+        run: |
+          mkdir -p artifacts
+          cd miryoku_zmk
+          west init -l config
+          west update
+          west zephyr-export
+          
+          board="${{ matrix.board }}"
+          shield="${{ matrix.shield }}"
+          artifact_name="${board//\//_}${shield:+-$shield}"
+          
+          west build -s zmk/app -b "$board" -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/miryoku_zmk/config" ${shield:+-DSHIELD="$shield"}
+          
+          if [ -f build/zephyr/zmk.uf2 ]; then
+            cp build/zephyr/zmk.uf2 "../artifacts/${artifact_name}.uf2"
+          elif [ -f build/zephyr/zmk.bin ]; then
+            cp build/zephyr/zmk.bin "../artifacts/${artifact_name}.bin"
+          fi
+      - name: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.board }}${{ matrix.shield && '-' }}${{ matrix.shield }}
+          path: artifacts/

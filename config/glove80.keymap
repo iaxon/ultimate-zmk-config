@@ -1,4 +1,6 @@
 #define CONFIG_WIRELESS
+#include "zmk-helpers/key-labels/glove80.h"
+
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                      \
     ZMK_LAYER(                                                                                    \
         name,                                                                                     \
@@ -11,5 +13,4 @@
         &kp LEFT  &kp RIGHT  LH &none                             &none    RH    &kp UP &kp DOWN  \
                                                      &none  &none &none)
 
-#include "zmk-helpers/key-labels/glove80.h"
 #include "base.keymap"
