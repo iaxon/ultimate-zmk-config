@@ -139,6 +139,7 @@
 
         // 0: Base Linux (Index finger = Ctrl)
         base_lnx_layer {
+            display-name = "0:LNX";
             bindings = <
         &kp ESC   &kp Q       &kp W       &kp F        &kp P        &kp B          &kp J   &kp L        &kp U        &kp Y       &kp SEMI    &kp MINUS
         &kp TAB   &hml LGUI A &hml LALT R &hml LSHFT S &hml LCTRL T &kp G          &kp M   &hmr RCTRL N &hmr RSHFT E &hmr RALT I &hmr RGUI O &kp RET
@@ -149,6 +150,7 @@
 
         // 1: Base Mac (Index finger = GUI/Cmd)
         base_mac_layer {
+            display-name = "1:MAC";
             bindings = <
         &kp ESC   &kp Q       &kp W       &kp F        &kp P        &kp B          &kp J   &kp L        &kp U        &kp Y       &kp SEMI    &kp MINUS
         &kp TAB   &hml LALT A  &hml LGUI R &hml LCTRL S &hml LSHFT T &kp G          &kp M   &hmr RSHFT N &hmr RCTRL E &hmr RALT I &hmr RGUI O &kp RET
@@ -160,6 +162,7 @@
 
         // 2: Nav (Unified Actions)
         nav_layer {
+            display-name = "2:NAV";
             bindings = <
 &kp ESC   &kp LA(F4)    ___           &kp LS(TAB)   &swapper      ___            &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___         &kp MINUS
 &kp TAB   &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     ___            &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET     &kp RET
@@ -170,6 +173,7 @@
 
         // 3: Fn
         fn_layer {
+            display-name = "3:FN";
             bindings = <
 &kp ESC   &kp F12       &kp F7        &kp F8        &kp F9        ___            ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    ___         &kp MINUS
 &kp TAB   &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6 ___            ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___         &kp RET
@@ -180,6 +184,7 @@
 
         // 4: Num
         num_layer {
+            display-name = "4:NUM";
             bindings = <
 &kp ESC   ___           &kp N7        &kp N8        &kp N9        ___            ___           ___           ___           ___           ___         &kp MINUS
 &kp TAB   &hml LGUI N0  &hml LALT N4  &hml LSHFT N5 &hml LCTRL N6 ___            ___           ___           ___           ___           ___         &kp RET
@@ -190,6 +195,7 @@
 
         // 5: Sys
         sys_layer {
+            display-name = "5:SYS";
             bindings = <
 &kp ESC   &tog 1        &trans        &trans        &trans        &trans         &trans        &trans        &trans        &trans        &trans      &kp MINUS
 &kp TAB   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR     &trans        &bootloader   &trans        &trans        &trans      &kp RET
@@ -200,6 +206,7 @@
 
         // 6: Mouse
         mouse_layer {
+            display-name = "6:MSE";
             bindings = <
 &kp ESC   ___           ___           ___           ___           ___            ___           &kp PG_UP     U_MS_U         &kp PG_DN    ___         &kp MINUS
 &kp TAB   ___           ___           ___           ___           ___            U_WH_L        U_MS_L        U_MS_D         U_MS_R       U_WH_R      &kp RET
