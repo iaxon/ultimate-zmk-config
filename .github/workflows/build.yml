@@ -18,13 +18,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        board: [nice_nano_v2, corneish_zen_left@2.0.0, corneish_zen_right@2.0.0, glove80_lh, glove80_rh]
-        shield: [""]
         include:
-          - board: nice_nano_v2
+          - board: nice_nano
             shield: corne_left
-          - board: nice_nano_v2
+          - board: nice_nano
             shield: corne_right
+          - board: corneish_zen_left@2.0.0
+          - board: corneish_zen_right@2.0.0
+          - board: glove80_lh
+          - board: glove80_rh
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -40,7 +42,10 @@ jobs:
           
           board="${{ matrix.board }}"
           shield="${{ matrix.shield }}"
-          artifact_name="${board//\//_}${shield:+-$shield}"
+          # Handle the //zmk suffix if needed, but here we just use the board name
+          # strip @revision and //zmk for the filename
+          clean_board=$(echo $board | sed 's/@.*//' | sed 's|//.*||')
+          artifact_name="${clean_board}${shield:+-$shield}"
           
           west build -s zmk/app -b "$board" -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/miryoku_zmk/config" ${shield:+-DSHIELD="$shield"}
           

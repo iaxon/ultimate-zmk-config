@@ -1,0 +1,303 @@
+layout: {zmk_keyboard: corne}
+layers:
+  base_lnx:
+  - Esc
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - '-'
+  - Tab
+  - '&hml LGUI A'
+  - '&hml LALT R'
+  - '&hml LCTRL S'
+  - '&hml LSHFT T'
+  - G
+  - M
+  - '&hmr RSHFT N'
+  - '&hmr RCTRL E'
+  - '&hmr RALT I'
+  - '&hmr RGUI O'
+  - Enter
+  - Alt
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - Bspc
+  - Ctrl
+  - '&lt_spc 1 0'
+  - {t: Enter, h: nav}
+  - '&smart_num 3 0'
+  - {t: Magic, h: Shift}
+  - num
+  base_mac:
+  - Esc
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - '-'
+  - Tab
+  - '&hml LALT A'
+  - '&hml LGUI R'
+  - '&hml LCTRL S'
+  - '&hml LSHFT T'
+  - G
+  - M
+  - '&hmr RSHFT N'
+  - '&hmr RCTRL E'
+  - '&hmr RALT I'
+  - '&hmr RGUI O'
+  - Enter
+  - Alt
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - Bspc
+  - Gui
+  - '&lt_spc 1 0'
+  - {t: Enter, h: nav}
+  - '&smart_num 3 0'
+  - {t: Magic, h: Shift}
+  - num
+  nav:
+  - Esc
+  - Close
+  - {type: trans}
+  - PWin
+  - NWin
+  - {type: trans}
+  - PgUp
+  - {t: Bspc, h: Ctl+Bspc}
+  - {t: ↑, h: Ctl+Home}
+  - {t: Del, h: Ctl+Del}
+  - {type: trans}
+  - '-'
+  - Tab
+  - {t: Gui, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Shift, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {type: trans}
+  - PgDn
+  - '&mt_home 0 LEFT'
+  - {t: ↓, h: Ctl+End}
+  - '&mt_end 0 RIGHT'
+  - Enter
+  - Enter
+  - Alt
+  - {type: trans}
+  - {t: '&copy_lnx', s: Gui+C}
+  - {t: '&paste_lnx', s: Gui+V}
+  - {type: trans}
+  - {type: trans}
+  - Ins
+  - Tab
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Bspc
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - Cancel
+  - {type: trans}
+  fn:
+  - Esc
+  - F12
+  - F7
+  - F8
+  - F9
+  - {type: trans}
+  - {type: trans}
+  - $$mdi:skip-backward$$
+  - $$mdi:volume-high$$
+  - $$mdi:skip-forward$$
+  - {type: trans}
+  - '-'
+  - Tab
+  - '&hml LGUI F11'
+  - '&hml LALT F4'
+  - '&hml LSHFT F5'
+  - '&hml LCTRL F6'
+  - {type: trans}
+  - {type: trans}
+  - '&hmr LCTRL LG(LC(LEFT))'
+  - '&hmr RSHFT C_VOL_DN'
+  - '&hmr LALT LG(LC(RIGHT))'
+  - {type: trans}
+  - Enter
+  - Alt
+  - F10
+  - F1
+  - F2
+  - F3
+  - {type: trans}
+  - PinA.
+  - PinW.
+  - Alt+`
+  - {type: trans}
+  - {type: trans}
+  - Bspc
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - $$mdi:volume-off$$
+  - $$mdi:play-pause$$
+  - {type: trans}
+  num:
+  - Esc
+  - {type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '-'
+  - Tab
+  - '&hml LGUI N0'
+  - '&hml LALT N4'
+  - '&hml LSHFT N5'
+  - '&hml LCTRL N6'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Enter
+  - Alt
+  - {type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Bspc
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  sys:
+  - Esc
+  - {t: base_mac, h: toggle}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '-'
+  - Tab
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT CLR
+  - {type: trans}
+  - Boot
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Enter
+  - Alt
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Boot
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Bspc
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  mouse:
+  - Esc
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - PgUp
+  - Mouse ↑
+  - PgDn
+  - {type: trans}
+  - '-'
+  - Tab
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Scroll ←
+  - Mouse ←
+  - Mouse ↓
+  - Mouse →
+  - Scroll →
+  - Enter
+  - Alt
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Left Click
+  - Middle Click
+  - Right Click
+  - {type: trans}
+  - Bspc
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Scroll ↑
+  - Scroll ↓
+  - {type: trans}
