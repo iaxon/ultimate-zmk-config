@@ -217,17 +217,17 @@ layers:
   - {type: trans}
   5:SYS:
   - Esc
-  - {t: '0:LNX', h: toggle}
   - {t: '1:MAC', h: toggle}
-  - OUT USB
-  - OUT BLE
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   - BT CLR
   - BT 1
   - BT 2
   - BT 3
   - BT 4
   - {t: BT, h: '4'}
-  - '-'
   - Tab
   - {type: trans}
   - {type: trans}
