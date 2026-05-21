@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: corne}
 layers:
-  base_lnx:
+  0:LNX:
   - Esc
   - Q
   - W
@@ -38,12 +38,12 @@ layers:
   - /
   - Bspc
   - Alt
-  - '&lt_spc 1 0'
-  - {t: Enter, h: nav}
-  - num
-  - '&smart_num 3 0'
+  - '&lt_spc 2 0'
+  - {t: Enter, h: '3:FN'}
+  - 5:SYS
+  - '&smart_num 4 0'
   - {t: Magic, h: Shift}
-  base_mac:
+  1:MAC:
   - Esc
   - Q
   - W
@@ -81,12 +81,12 @@ layers:
   - /
   - Bspc
   - Alt
-  - '&lt_spc 1 0'
-  - {t: Enter, h: nav}
-  - num
-  - '&smart_num 3 0'
+  - '&lt_spc 2 0'
+  - {t: Enter, h: '3:FN'}
+  - 5:SYS
+  - '&smart_num 4 0'
   - {t: Magic, h: Shift}
-  nav:
+  2:NAV:
   - Esc
   - Close
   - {type: trans}
@@ -125,11 +125,11 @@ layers:
   - Bspc
   - {type: trans}
   - {type: trans}
-  - {type: held}
+  - {type: trans}
   - {type: trans}
   - Cancel
   - {type: trans}
-  fn:
+  3:FN:
   - Esc
   - F12
   - F7
@@ -168,11 +168,11 @@ layers:
   - Bspc
   - {type: trans}
   - {type: trans}
-  - {type: trans}
+  - {type: held}
   - $$mdi:volume-off$$
   - $$mdi:play-pause$$
   - {type: trans}
-  num:
+  4:NUM:
   - Esc
   - {type: trans}
   - '7'
@@ -212,13 +212,13 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - {type: held}
   - {type: trans}
   - {type: trans}
-  sys:
+  - {type: trans}
+  5:SYS:
   - Esc
-  - {t: base_mac, h: toggle}
-  - {type: trans}
+  - {t: '1:MAC', h: toggle}
+  - {t: '0:LNX', h: toggle}
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -236,8 +236,8 @@ layers:
   - BT CLR
   - {type: trans}
   - Boot
-  - {type: trans}
-  - {type: trans}
+  - EP ON
+  - EP OFF
   - {type: trans}
   - Enter
   - Alt
@@ -255,10 +255,10 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
+  - {type: held}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  mouse:
+  6:MSE:
   - Esc
   - {type: trans}
   - {type: trans}
