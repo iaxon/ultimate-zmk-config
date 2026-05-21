@@ -217,23 +217,23 @@ layers:
   - {type: trans}
   5:SYS:
   - Esc
-  - {t: '1:MAC', h: toggle}
   - {t: '0:LNX', h: toggle}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - '-'
-  - Tab
+  - {t: '1:MAC', h: toggle}
+  - OUT USB
+  - OUT BLE
+  - BT CLR
   - BT 1
   - BT 2
   - BT 3
   - BT 4
-  - BT CLR
+  - {t: BT, h: '4'}
+  - '-'
+  - Tab
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   - {type: trans}
   - Boot
   - EP ON

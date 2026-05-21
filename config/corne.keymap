@@ -198,7 +198,7 @@
         sys_layer {
             display-name = "5:SYS";
             bindings = <
-&kp ESC   &tog 1        &to 0         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR    &out OUT_USB  &out OUT_BLE  &trans      &kp MINUS
+&kp ESC   &to 0         &to 1         &out OUT_USB  &out OUT_BLE  &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp MINUS
 &kp TAB   &trans        &trans        &trans        &trans        &trans         &trans        &bootloader   &ext_power EP_ON &ext_power EP_OFF &trans &kp RET
 &kp LALT  &trans        &trans        &trans        &trans        &trans         &bootloader   &trans        &trans        &trans        &trans      &kp BSPC
                                       &trans        &trans        &trans         &trans        &trans        &trans
