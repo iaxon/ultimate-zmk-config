@@ -12,6 +12,13 @@
 /*
  * Layer indices for Corne
  */
+#undef DEF
+#undef NAV
+#undef FN
+#undef NUM
+#undef SYS
+#undef MOUSE
+
 #define DEF_LNX 0
 #define DEF_MAC 1
 #define NAV     2
@@ -19,6 +26,8 @@
 #define NUM     4
 #define SYS     5
 #define MOUSE   6
+
+#define DEF DEF_LNX // Override DEF for base.dtsi compatibility
 
 /*
  * Key labels for 42-key Corne

@@ -12,12 +12,24 @@
   #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
 #endif
 
+#ifndef DEF
 #define DEF 0
+#endif
+#ifndef NAV
 #define NAV 1
+#endif
+#ifndef FN
 #define FN 2
+#endif
+#ifndef NUM
 #define NUM 3
+#endif
+#ifndef SYS
 #define SYS 4
+#endif
+#ifndef MOUSE
 #define MOUSE 5
+#endif
 
 #define XXX &none
 #define ___ &trans
