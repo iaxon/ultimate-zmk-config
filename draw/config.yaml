@@ -176,24 +176,27 @@ draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
   footer_text: "urob/zmk-config"
-  glyph_tap_size: 15
-  glyph_hold_size: 12
-  glyph_shifted_size: 10
-  legend_rel_y: 1
-  outer_pad_w: 10
-  outer_pad_h: 10
-  small_pad: 4
+  glyph_tap_size: 14
+  glyph_hold_size: 10
+  glyph_shifted_size: 9
+  legend_rel_y: 1.1
+  outer_pad_w: 15
+  outer_pad_h: 15
+  small_pad: 2
 
   svg_style: |
     svg.keymap {
         fill: #3c3836;
         background-color: #fbf1c7;
-        font-family: Calibri, system-ui, sans-serif;
-        font-size: 16px;
+        font-family: system-ui, sans-serif;
+        font-size: 14px;
     }
-    rect.key, rect.combo, rect.combo-separate { fill: #ebdbb2; stroke: #3c3836; stroke-width: 1; }
+    rect.key, rect.combo, rect.combo-separate { fill: #ebdbb2; stroke: #3c3836; stroke-width: 0.5; }
     rect.held, rect.combo.held                { fill: #bdae93; }
     text { fill: #3c3836; text-anchor: middle; dominant-baseline: middle; }
-    text.label { fill: #3c3836; font-weight: bold; }
-    text.footer { fill: #3c3836; }
-    path.combo { stroke: #d5c4a1; stroke-width: 2; stroke-dasharray: 2, 3; opacity: 0.45; fill: none; }
+    text.tap     { font-weight: 600; font-size: 14px; }
+    text.hold    { font-size: 9px; fill: #7c6f64; }
+    text.shifted { font-size: 8px; fill: #928374; }
+    text.label   { fill: #3c3836; font-weight: bold; font-size: 16px; }
+    text.footer  { fill: #7c6f64; font-size: 10px; }
+    path.combo { stroke: #d5c4a1; stroke-width: 1.5; stroke-dasharray: 2, 2; opacity: 0.45; fill: none; }

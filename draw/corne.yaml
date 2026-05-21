@@ -16,12 +16,12 @@ layers:
   - Tab
   - '&hml LGUI A'
   - '&hml LALT R'
-  - '&hml LCTRL S'
-  - '&hml LSHFT T'
+  - '&hml LSHFT S'
+  - '&hml LCTRL T'
   - G
   - M
-  - '&hmr RSHFT N'
-  - '&hmr RCTRL E'
+  - '&hmr RCTRL N'
+  - '&hmr RSHFT E'
   - '&hmr RALT I'
   - '&hmr RGUI O'
   - Enter
@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - Bspc
-  - Ctrl
+  - Alt
   - '&lt_spc 1 0'
   - {t: Enter, h: nav}
+  - num
   - '&smart_num 3 0'
   - {t: Magic, h: Shift}
-  - num
   base_mac:
   - Esc
   - Q
@@ -80,12 +80,12 @@ layers:
   - .
   - /
   - Bspc
-  - Gui
+  - Alt
   - '&lt_spc 1 0'
   - {t: Enter, h: nav}
+  - num
   - '&smart_num 3 0'
   - {t: Magic, h: Shift}
-  - num
   nav:
   - Esc
   - Close
@@ -212,9 +212,9 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
   - {type: held}
+  - {type: trans}
+  - {type: trans}
   sys:
   - Esc
   - {t: base_mac, h: toggle}
